@@ -1,8 +1,53 @@
+import {
+  Routes,
+  Route,
+  useNavigationType,
+  useLocation,
+} from "react-router-dom";
+import BOOKINGHISTORY from "./pages/b-o-o-k-i-n-g-h-i-s-t-o-r-y";
+import { useEffect } from "react";
 
 function App() {
+  const action = useNavigationType();
+  const location = useLocation();
+  const pathname = location.pathname;
+
+  useEffect(() => {
+    if (action !== "POP") {
+      window.scrollTo(0, 0);
+    }
+  }, [action]);
+
+  useEffect(() => {
+    let title = "";
+    let metaDescription = "";
+
+    //TODO: Update meta titles and descriptions below
+    switch (pathname) {
+      case "/":
+        title = "";
+        metaDescription = "";
+        break;
+    }
+
+    if (title) {
+      document.title = title;
+    }
+
+    if (metaDescription) {
+      const metaDescriptionTag = document.querySelector(
+        'head > meta[name="description"]'
+      );
+      if (metaDescriptionTag) {
+        metaDescriptionTag.content = metaDescription;
+      }
+    }
+  }, [pathname]);
+
   return (
-    <div>Hello</div>
+    <Routes>
+      <Route path="/" element={<BOOKINGHISTORY />} />
+    </Routes>
   );
 }
-
 export default App;
