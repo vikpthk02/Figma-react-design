@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Figma-react-design/static/css/main.fa46191f.css",
+    "main.js": "/Figma-react-design/static/js/main.6cfb5ab4.js",
+    "index.html": "/Figma-react-design/index.html",
+    "main.fa46191f.css.map": "/Figma-react-design/static/css/main.fa46191f.css.map",
+    "main.6cfb5ab4.js.map": "/Figma-react-design/static/js/main.6cfb5ab4.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fa46191f.css",
+    "static/js/main.6cfb5ab4.js"
+  ]
+}
